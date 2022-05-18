@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag "favicon.ico"%>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <>
+   <ul>
+
+     <li><%= link_to 'Contacts', main_contacts_path%></li>
+     <li><%= link_to 'Help', main_help_path%></li>
+     <li><%= link_to 'About', main_about_path%></li>
+     <li><%= link_to 'Ruby on Rails Website', 'http://rubyonrails.org'%></li>
+   </ul>>
+
+
+  <%= yield %>
+   <%=render 'shared/header' %>
+   <%=render 'shared/footer' %>
+
+
+  </body>
+
+</html>
