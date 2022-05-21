@@ -7,8 +7,9 @@ ruby "2.7.5"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails'
 
+gem 'turbolinks'
 
  # Use postgresql as the database for Active Record
 gem "pg"
@@ -52,15 +53,20 @@ gem "bootsnap", require: false
 # Use jquery as the JavaScript library
 gem 'jquery-ui-rails'
 gem 'rails-asset-jqueryui'
+gem "therubyracer"
 
-# Use SАSS for stylesheets
-gem 'sass-rails'
+# JS gems
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'bootstrap'
 
-gem 'bootstrap-sass'
+# Use Sass to process CSS
+gem "sassc-rails"
+gem "font-awesome-rails"
 
 # Icons fonts
-gem 'font-awesome-sass' #, '~> 4.6.2'
-gem 'font-awesome-rails'#
+#gem 'font-awesome-sass', '~> 4.6.2'
+#gem 'font-awesome-rails'
 # Pagination
 # gem 'will_paginate'
 gem 'kaminari'
@@ -71,7 +77,7 @@ gem "haml"
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+#gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -87,6 +93,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "erb2haml"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
