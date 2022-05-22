@@ -9,7 +9,7 @@ User.delete_all
 User.reset_pk_sequence
 User.create([
 
-              {name: "Example User", email: "example@railstutorial.org", password: "222222", password_confirmation: "222222"},
+              {name: "Example User", email: "example@railstutorial.org"},
             ])
 Image.delete_all
 Image.reset_pk_sequence

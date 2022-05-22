@@ -61,9 +61,8 @@ gem 'popper_js'
 gem 'bootstrap'
 
 # Use Sass to process CSS
-gem "sassc-rails"
-gem "font-awesome-rails"
-
+gem 'font-awesome-sass'
+gem 'bootstrap-sass'
 # Icons fonts
 #gem 'font-awesome-sass', '~> 4.6.2'
 #gem 'font-awesome-rails'
