@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   get 'work/index'
   get 'work/choose_theme'
   get 'work/display_theme'
@@ -21,8 +22,11 @@ Rails.application.routes.draw do
   get 'about'   => 'main#about'
   get 'contact' => 'main#contacts'
   get 'index' => 'main#index'
-  get 'login' => 'main#login'
   get 'signup' => 'users#new'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
