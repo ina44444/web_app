@@ -60,6 +60,7 @@ gem 'jquery-rails'
 gem 'popper_js'
 gem 'bootstrap'
 
+
 # Use Sass to process CSS
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
@@ -71,6 +72,8 @@ gem 'bootstrap-sass'
 gem 'kaminari'
 
 gem "haml"
+
+gem 'rails-i18n'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

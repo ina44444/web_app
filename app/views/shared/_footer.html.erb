@@ -1,7 +1,15 @@
 <footer class="footer">
   <small>
     Developed by Angelina M.
+
   </small>
+  <p class = 'locale'>
+    <%= link_to image_tag("rus.jpeg", alt: "",  style: "width: 4%; height: 4%",
+                          title: "Русский",align:"left",id: "flag"), locale: :ru %>
+    <%= link_to image_tag("en.jpg", alt: "",  style: "width: 4%; height: 5%",
+                          title: "English",align:"left",id: "flag"), locale: :en %>
+    <b><%=I18n.locale%> </b>
+  </p>
   <nav>
     <ul>
       <li><%= link_to "About",   about_path %></li>

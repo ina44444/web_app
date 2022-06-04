@@ -1,10 +1,27 @@
-<p style="color: green"><%= notice %></p>
+<table id="Card od picture">
+  <tr>
+    <th>
+      <b>Name:</b>
+      <%= @image.name %>
+    </th>
+    <th>
+      <b>Ave value:</b>
+      <%= @image.ave_value %>
+    </th>
+    <th >
+      <b>Theme:</b>
+      <%= @image.theme_id %>
+    </th>
 
-<%= render @image %>
+  <tr>
+  </tr>
+</table>
 
-<div>
-  <%= link_to "Edit this image", edit_image_path(@image) %> |
-  <%= link_to "Back to images", images_path %>
+<p>
+  <%= image_tag @image.file,  style: "width: 80%; height: 80%" %>
+</p>
 
-  <%= button_to "Destroy this image", @image, method: :delete %>
-</div>
+<%= link_to 'Edit', edit_image_path(@image) %>
+\|
+<%= link_to 'Back', images_path %>
+

@@ -24,6 +24,7 @@ textarea {
 .center {
   text-align: center;
   h1 {
+    margin-top: 100px;
     margin-bottom: 10px;
   }
 }
@@ -72,14 +73,18 @@ header {
   small {
     float: left;
   }
+
+  nav{
   ul {
     float: right;
+
     list-style: none;
     li {
-      float: left;
+      float: right;
       margin-left: 15px;
     }
-  }
+  }}
+
 }
 
 #logo {
@@ -96,6 +101,12 @@ header {
     text-decoration: none;
   }
 }
+
+#flag{
+  float: left;
+
+}
+
 
 /* footer */
 
@@ -164,6 +175,9 @@ aside {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
+  margin: 0 auto;
+
+
 }
 
   /* miscellaneous */
@@ -214,4 +228,16 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+table{
+  position: center;
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+  border: 1px solid white; /* Прячем рамку вокруг таблицы */
+}
+td,th{
+  width: 200px;
+  padding: 3px; /* Поля вокруг содержимого таблицы */
+  border: 1px solid white; /* Параметры рамки */
+  text-align: center; /* Выравнивание по центру */
 }
