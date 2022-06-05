@@ -20,8 +20,42 @@
 <p>
   <%= image_tag @image.file,  style: "width: 80%; height: 80%" %>
 </p>
+<div class="col-md-4">
+
+  <div class="reviews">
+
+
+    <%= render @image.values %>
+
+    <div>
+      <%= link_to "Add Review", new_image_value_path(@image), class: "btn-custom" %>
+    </div>
+
+  </div>
+
+</div>
 
 <%= link_to 'Edit', edit_image_path(@image) %>
 \|
 <%= link_to 'Back', images_path %>
 
+<script>
+    $('.review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+</script>
+
+
+<script>
+    $('.average-review-rating').raty({
+        readOnly: true,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
+</script>

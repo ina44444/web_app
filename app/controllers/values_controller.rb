@@ -1,5 +1,5 @@
 class ValuesController < ApplicationController
-  before_action :set_value, only: %i[ show edit update destroy ]
+  before_action :find_value, only: %i[ show edit update destroy ]
 
   # GET /values or /values.json
   def index
@@ -22,6 +22,13 @@ class ValuesController < ApplicationController
   # POST /values or /values.json
   def create
     @value = Value.new(value_params)
+    @value.image_id = @image.id
+    @value.user_id = @current_user.id
+    if @value.save
+      redirect_to image_path(@image)
+    else
+      render 'new'
+    end
 
     respond_to do |format|
       if @value.save
@@ -59,8 +66,8 @@ class ValuesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_value
-      @value = Value.find(params[:id])
+    def find_value
+      @value = Value.find(params[:image_id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -1,17 +1,21 @@
-<div id="<%= dom_id value %>">
-  <p>
-    <strong>User:</strong>
-    <%= value.user_id %>
-  </p>
+<div class="review">
 
-  <p>
-    <strong>Image:</strong>
-    <%= value.image_id %>
-  </p>
+  <div class="review-rating" data-score="<%= value.value %>"></div>
 
-  <p>
-    <strong>Value:</strong>
-    <%= value.value %>
-  </p>
+
+
+  <% if logged_in? %>
+    <% if value.user_id == current_user.id %>
+
+      <div class="links btn-group">
+
+        <%= link_to "Edit", edit_image_value_path(value.image, value), class: "btn btn-custom" %>
+
+
+      </div>
+
+    <% end %>
+  <% end %>
 
 </div>
+

@@ -11,7 +11,7 @@ gem 'sprockets-rails'
 
 gem 'turbolinks'
 
- # Use postgresql as the database for Active Record
+# Use postgresql as the database for Active Record
 gem "pg"
 
 gem 'activerecord-reset-pk-sequence'
@@ -64,6 +64,7 @@ gem 'bootstrap'
 # Use Sass to process CSS
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
+gem 'simple_form', '~> 5.1'
 # Icons fonts
 #gem 'font-awesome-sass', '~> 4.6.2'
 #gem 'font-awesome-rails'
