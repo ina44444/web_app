@@ -1,0 +1,42 @@
+div class="image" style="margin: 25px 0;"
+  div class="row"
+    div class="col-md-3"
+      div class="left_controls panel panel-default text-center"
+        div class="select_theme"
+          = render 'button_theme_select'
+        h4 class="common_value" средняя оценка:
+        span class="common"
+        h4 class="total_values" всего оценок:
+        span class="total"
+    div class="col-md-9"
+      div class="image_display panel panel-primary"
+
+        div class="row image"
+          div class="col-md-12"
+            h2 class="up-theme text-center"
+              =@selected_theme
+
+          div class="col-md-1"
+            div class="img-left-side"
+              span title="list to previous image"
+                i class="fa fa-arrow-circle-left strong"
+
+          div class="col-md-10"
+            div class="img-center"
+              figure
+                img alt="Expertise" src='assets/pictures/defoult.jpg' style="width:100%; height:100%"
+                figcaption class="text-center" =@selected_image_name
+              div class="choose-user-value"
+                h3 class="text-center" Выберите оценку
+                form oninput="level.value=rlevel.value"
+                  input class="form-control" name="rlevel" id="range" type="range" min="1" max="100" value="1"
+                  output class="text-center" for="range" name="level" 1
+                a class="btn btn-primary button__results save" data-remote="true" href="#" Сохранить
+              div class="image-user-value"
+                h3 class="text-center" Ваша оценка:
+                p class="text-center"
+
+          div class="col-md-1"
+            div class="img-right-side"
+              span title="list to next image"
+                i class="fa fa-arrow-circle-right"
