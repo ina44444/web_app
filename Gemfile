@@ -54,17 +54,23 @@ gem "bootsnap", require: false
 gem 'jquery-ui-rails'
 gem 'rails-asset-jqueryui'
 gem "therubyracer"
+gem 'rails-asset-jqueryui'
 
 # JS gems
 gem 'jquery-rails'
 gem 'popper_js'
 gem 'bootstrap'
 
+gem 'slim'
+gem 'slim-rails'
+
 
 # Use Sass to process CSS
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
-gem 'simple_form', '~> 5.1'
+gem 'font-awesome-rails'
+gem 'sass-rails'
+
 # Icons fonts
 #gem 'font-awesome-sass', '~> 4.6.2'
 #gem 'font-awesome-rails'

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'sessions/new'
   get 'work/index'
   get 'work/choose_theme'
@@ -7,9 +9,10 @@ Rails.application.routes.draw do
 
   # work
 
-  match 'work',                  to: 'work#index',        via: 'get'
+  match 'work',                  to: 'work#index',                  via: 'get'
   match 'choose_theme',     to: 'work#choose_theme',      via: :get
-  match 'display_theme',    to: 'images#index',     via: :get
+  match 'display_theme',    to: 'work#display_theme',      via: :post
+
 
   resources :themes
   resources :images do
@@ -17,10 +20,14 @@ Rails.application.routes.draw do
    end
   resources :users
 
+  namespace :api, defaults: { format: :json } do
+    match 'next_image', to: 'api#next_image', via: :get
+    match 'prev_image', to: 'api#prev_image', via: :get
+    match 'save_value',       to: 'api#save_value',   via: :get
+  end
 
 
-
-  root             'main#home'
+  root 'work#index'
   get 'help'    => 'main#help'
   get 'about'   => 'main#about'
   get 'contact' => 'main#contacts'

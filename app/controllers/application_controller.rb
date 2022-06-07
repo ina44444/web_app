@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  #protect_from_forgery with: :exception
   include SessionsHelper
 
   before_action :set_locale
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
       extra_locale_in_accept_lang
       if I18n.available_locales.include?(params[:locale].to_sym)
         I18n.locale = params[:locale]
-        logger.info flash.now[:notice]
+        #logger.info flash.now[:notice]
       else
         flash.now[:alarm] = " #{params[:locale]} Перевод
  страницы отсутствует"

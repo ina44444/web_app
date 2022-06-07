@@ -1,44 +1,12 @@
-$('.image .image_display .image_diag').css({"display": "none"});
-$('.img-left-side').css({"display": "none"});
-$('.img-right-side').css({"display": "none"});
 // to check whether the target is the content-area itself or a child of the content-area.
-
 $(document).click(function(e){
-    if($(e.target).is(".select_theme") ||
-        $(e.target).closest(".select_theme").length) {
+    if($(e.target).is(".select_theme") || $(e.target).closest(".select_theme").length) {
         console.log(": In doc.click = IN side content area"  );
     }
     else {
         console.log(": In doc.click = OUT side content area"  );
-        $('.form_select').css({"display": "none"});
-
-
-        $('.select_theme').empty().html("<%= j render 'work/button_theme_select' -%>");
+        $('.select_theme').html("<%= j render 'button_theme_select' -%>");
     }
 });
-$('.select_theme').empty().html("<%= j render 'choose_theme_from_arr' -%>");
 
-$.ajax({
-    type: "get",
-    url: "controllers/api/next_image",
-    data: { index: imageCurrentIndex,
-        theme_id: selectedThemeId,
-        length: themeImagesSize },
-    dataType: 'json'
-}).done(function (data_return) {
-
-    imageCurrentIndex = data_return.new_image_index;
-    oneImageName = data_return.name;
-    oneImageFile = data_return.file;
-    oneImageId = data_return.image_id;
-    $('.image_display h2.up').append().html(oneImageName);
-    let pathImage = "assets/pictures/" + oneImageFile;
-    $(".img-center").attr({title: "Selected image" });
-    $(".img-center img").attr({alt: "Selected Image", src:
-        pathImage, title: "Selected image" });
-})
-  .fail(function (data_return) {
-      console.log("error: data_return = " + data_return);
-  });
-
-
+$('.select_theme').html("<%= j render 'choose_theme_from_arr' -%>");
