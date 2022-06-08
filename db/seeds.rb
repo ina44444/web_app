@@ -22,16 +22,16 @@ Image.create([
                {name: 'Эверест', file: 'iStock-137373260_d_850.jpg', theme_id: 3},
                {name: 'Маттерхорн', file: '134987.jpg', theme_id: 3},
                {name: 'Хайкинг', file: 'hiking.jpg', theme_id: 4},
-               {name: 'Велотуризм', file: 'veloturizm.jpg', theme_id: 4},
-               {name: 'Полет на воздушном шаре', file: 'kappadokia.jpg', theme_id: 4},
-               {name: 'Сёрфинг', file: 'Serfing.jpg', theme_id: 4},
+               {name: 'Велотуризм',file: 'veloturizm.jpg', theme_id: 4},
+               {name: 'Полеты на воздушном шаре',file: 'kappadokia.jpg', theme_id: 4},
+               {name: 'Серфинг', file: 'Serfing.jpg', theme_id: 4},
              ])
 Theme.delete_all
 Theme.reset_pk_sequence
 Theme.create([
 
-               {name: "-----"},      # 1 Нет темы
-               {name: "Оцените популярность города для туризма"},      # 2
-               {name: "Оцените известность гор"},      # 3
-               {name: "Оцените популярность активности"},      # 4
+               {name: '-----'},      # 1 Нет темы
+               {name: 'Оцените город'},      # 2
+               {name: 'Оцените известность гор'} ,    # 3
+               {name: 'Оцените популярность активности'}   # 4
              ])

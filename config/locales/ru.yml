@@ -18,4 +18,16 @@ ru:
       title_2: "Это домашняя страница учебного приложения о путешествиях"
       button_1: "Начать экспертизу"
       button_2: "Зарегестрироваться!!"
-
+  work:
+    index:
+      def_select_theme: "Выберите тему для оценки"
+    button_theme_select:
+      select_theme_bt: "Выбрать тему"
+    choose_theme_from_arr:
+      select_theme: "Выберите тему"
+      prompt: "Список тем"
+    choose_theme:
+      select_theme: "Выберите тему"
+  about:
+    title1: "О нас"
+    title2: "Некоторая информация о нас"

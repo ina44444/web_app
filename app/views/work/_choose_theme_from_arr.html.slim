@@ -1,9 +1,9 @@
 div class="form_select"
   = form_tag('/display_theme', remote: true,  :format => 'js') do
-    = hidden_field_tag 'locale', I18n.locale
+
     = select_tag :theme_id,
             options_from_collection_for_select(@themes, 'id', @name),
-            prompt: t('.prompt'),
+            prompt: 'prompt',
             onchange:  "$(this).parent('form').submit();",
             formats: [ :js ],
             class: 'form-control'

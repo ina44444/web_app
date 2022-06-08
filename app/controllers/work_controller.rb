@@ -6,14 +6,14 @@ class WorkController < ApplicationController
       redirect_to root_path
     end
     @selected_theme = t('.def_select_theme')
-    @selected_image_name = ''
+    @selected_image_name = 'Start theme'
     @current_locale = I18n.locale
     session[:current_locale] = @current_locale
   end
 
   def choose_theme
     @themes = Theme.all
-    @name = Theme.current_role(:name)
+    @name = Theme.all.pluck(:name)
     respond_to :js
   end
 

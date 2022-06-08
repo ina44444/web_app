@@ -21,7 +21,7 @@ function ajax(image){
         });
 
         var userValuedFlag = data_return.user_valued;
-        if(userValuedFlag  == 1){
+        if(userValuedFlag  === 1){
             $('.common_value').css({"display": "block"});
             var imageValue = data_return.value;
             $('.image-user-value p').html(imageValue);
@@ -52,7 +52,7 @@ $('.total').html(valuesQty);
 // show theme
 var selectedTheme = '<%= @image_data[:theme] %>';
 
-if( selectedTheme == "Выберите тему для оценки" || selectedTheme == "Select theme to give your opinion" || selectedTheme == ""){
+if( selectedTheme === "Выберите тему для оценки" || selectedTheme === "Select theme to give your opinion" || selectedTheme === ""){
     $('.img-left-side').css({"display": "none"});
     $('.img-right-side').css({"display": "none"});
     $('.choose-user-value').css({"display": "none"});
@@ -118,7 +118,7 @@ $('a.button__results.save').unbind( "click" ).click(function(event) {
         $('.image-user-value p').html(userImageValue);
 
         var userValuedFlag = data_return.user_valued;
-        if(userValuedFlag  == 1){
+        if(userValuedFlag  === 1){
             $('.common_value').css({"display": "block"});
             $('.choose-user-value').css({"display": "none"});
 

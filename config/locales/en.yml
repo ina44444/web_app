@@ -18,6 +18,19 @@ en:
       title_2: "This is the home page for the sample application about travelling"
       button_1: "Start expertise"
       button_2: "Sign up now!"
+  work:
+    index:
+      def_select_theme: "Select theme to give your opinion"
+    button_theme_select:
+      select_theme_bt: "Select theme"
+    choose_theme_from_arr:
+      select_theme: "Select theme"
+      prompt: "Themes list"
+    choose_theme:
+      select_theme: "Select theme"
+  about:
+    title1: "About"
+    title2: "Some information about us"
 
 
 

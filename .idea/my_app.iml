@@ -122,7 +122,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v3.19.1, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v6.0.0, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.1.0, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
@@ -148,6 +147,10 @@
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.5.4, Remote-rvm: ruby-2.7.5-p203) [gem]" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-3.2.1.slim" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
+    <orderEntry type="library" name="@popperjs/core" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

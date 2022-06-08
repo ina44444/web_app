@@ -69,7 +69,7 @@ gem 'slim-rails'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem 'sass-rails'
+gem 'sassc-rails'
 
 # Icons fonts
 #gem 'font-awesome-sass', '~> 4.6.2'
