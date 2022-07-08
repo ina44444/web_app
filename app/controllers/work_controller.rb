@@ -32,7 +32,7 @@ class WorkController < ApplicationController
                current_user_id: current_user_id, user_valued: false,
                common_ave_value: 0, value: 0 }
     else
-      theme = params[:theme]
+
       theme_id = params[:theme_id]
       #   theme_id = Theme.find_theme_id(theme)
       data = show_image(theme_id, 0)
