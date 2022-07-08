@@ -117,3 +117,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end

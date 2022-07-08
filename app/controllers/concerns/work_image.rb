@@ -8,8 +8,7 @@ module WorkImage
     logger.info "In show_image: current_user_id = #{current_user_id.inspect} "
 
     one_image_attr = theme_images[image_index].attributes
-    one_image_attr['name'] = I18n.locale == :ru ? one_image_attr['name_ru'] : one_image_attr['name_en']
-
+    one_image_attr['name'] = one_image_attr['name']
     logger.info "In show_image: one_image_attr = #{one_image_attr.inspect} "
     image_id = one_image_attr['id']
     logger.info "In show_image: image_id = #{image_id.inspect} "

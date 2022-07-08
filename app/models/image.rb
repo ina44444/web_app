@@ -3,7 +3,7 @@ class Image < ApplicationRecord
     I18n.translate :name
 
 
-    scope :theme_images, -> (theme_id) {select('id', 'name_en', 'name_ru', 'file', 'ave_value').where(theme_id: theme_id)}
+    scope :theme_images, -> (theme_id) {select('id', 'name', 'file', 'ave_value').where(theme_id: theme_id)}
     scope :find_image, -> (image_id) { find(image_id) }
 
     def self.update_ave_value(image_id, ave_value)

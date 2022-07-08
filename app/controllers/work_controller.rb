@@ -19,18 +19,22 @@ class WorkController < ApplicationController
 
   def display_theme
     current_user_id = current_user.id
-    theme = I18n.locale == :ru ? Theme.find(params[:theme_id]).name_ru : Theme.find(params[:theme_id]).name_en
-
-    if params[:theme_id] == '1'
-      theme = I18n.locale == :ru ? 'Выберите тему для оценки' : 'Select theme to give your opinion'
+    @image_data = {}
+    I18n.locale = session[:current_locale]
+    current_user_id = 1
+    if params[:theme] == "-----"
+      #theme = "Select theme to leave your answer"
+      theme = '.select_theme'
       theme_id = 1
       values_qty = Value.all.count.round
-      data = { index: 0, name: '', values_qty: values_qty,
+      data = { index: 0, name: 'Defoult theme', values_qty: values_qty,
                file: 'Expertise.jpg', image_id: 1,
                current_user_id: current_user_id, user_valued: false,
                common_ave_value: 0, value: 0 }
     else
+      theme = params[:theme]
       theme_id = params[:theme_id]
+      #   theme_id = Theme.find_theme_id(theme)
       data = show_image(theme_id, 0)
     end
     session[:selected_theme_id] = theme_id
