@@ -16,7 +16,7 @@ class WorkController < ApplicationController
   def choose_theme
     @themes = Theme.all
     @name = Theme.find_by_name(:name)
-    respond_to :js
+    #respond_to :js
   end
 
   def display_theme
@@ -43,7 +43,7 @@ class WorkController < ApplicationController
     end
     session[:selected_theme_id] = theme_id
     image_data(:theme, data)
-    respond_to :js
+    #respond_to :js
   end
 
 end

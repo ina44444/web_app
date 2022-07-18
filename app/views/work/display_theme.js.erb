@@ -14,7 +14,7 @@ function ajax(image){
         oneImageFile = data_return.file;
         oneImageId = data_return.image_id;
         $('.image_display figcaption').hide().html(oneImageName).fadeIn(600);
-        const pathImage = "assets/images/"+oneImageFile;
+        var pathImage = "assets/pictures/"+oneImageFile;
         $(".img-center").attr({title: oneImageName });
         $(".img-center img").fadeOut(500, function(){
             $(this).attr({alt: oneImageName, src: pathImage, title: oneImageName }).fadeIn(600);
@@ -82,7 +82,7 @@ var selectedThemeId = '<%= @image_data[:theme_id] %>';
 $('.image_display figcaption').html(oneImageName);
 
 // show image
-var pathImage = "assets/pictures/" + oneImageFile;
+var pathImage = "assets/images" + oneImageFile;
 // $('.img-center').html('<img alt="Selected Image" src="'+ pathImage + '"/>');
 $(".img-center").attr({title: oneImageName });
 $(".img-center img").attr({alt: oneImageName, src: pathImage, title: oneImageName });
