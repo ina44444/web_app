@@ -1,6 +1,7 @@
 class Image < ApplicationRecord
     belongs_to :theme
     I18n.translate :name
+    has_many :values, dependent: :destroy
 
 
     scope :theme_images, -> (theme_id) {select('id', 'name', 'file', 'ave_value').where(theme_id: theme_id)}
@@ -34,7 +35,7 @@ class Image < ApplicationRecord
           value: value,
           common_ave_value: common_ave_value
         }
-        # logger.info "In show_image:  data = #{data.inspect} "
+         logger.info "In show_image:  data = #{data.inspect} "
         data
     end
 

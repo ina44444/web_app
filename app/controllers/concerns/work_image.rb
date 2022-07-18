@@ -6,9 +6,10 @@ module WorkImage
 
     current_user_id = current_user.id
     logger.info "In show_image: current_user_id = #{current_user_id.inspect} "
+    logger.info "In show_image: Image.theme_images = #{Image.theme_images(theme_id).inspect} "
 
     one_image_attr = theme_images[image_index].attributes
-    one_image_attr['name'] = one_image_attr['name']
+    # one_image_attr['name'] = one_image_attr['name']
     logger.info "In show_image: one_image_attr = #{one_image_attr.inspect} "
     image_id = one_image_attr['id']
     logger.info "In show_image: image_id = #{image_id.inspect} "

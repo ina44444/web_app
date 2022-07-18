@@ -1,20 +1,20 @@
 function ajax(image){
     $.ajax({
         type: "get",
-        url: "api/"+image+"_image",
+        url: "api/next_image",
         data: { index: imageCurrentIndex,
             theme_id: selectedThemeId,
             length: themeImagesSize,
-            locale: locale
-        },
+            locale: locale },
         dataType: 'json'
     }).done(function (data_return) {
+        console.log("success:  " + data_return.notice );
         imageCurrentIndex = data_return.new_image_index;
         oneImageName = data_return.name;
         oneImageFile = data_return.file;
         oneImageId = data_return.image_id;
         $('.image_display figcaption').hide().html(oneImageName).fadeIn(600);
-        var pathImage = "assets/pictures/" + oneImageFile;
+        const pathImage = "assets/images/"+oneImageFile;
         $(".img-center").attr({title: oneImageName });
         $(".img-center img").fadeOut(500, function(){
             $(this).attr({alt: oneImageName, src: pathImage, title: oneImageName }).fadeIn(600);
