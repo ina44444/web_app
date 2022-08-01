@@ -3,7 +3,7 @@ div class="form_select"
 
     = select_tag :theme,
             options_from_collection_for_select(@themes, 'name','name'),
-            prompt: 'select theme',
+            prompt: t('work.choose_theme_from_arr.prompt'),
             onchange:  "$(this).parent('form').submit();",
             formats: [ :js ],
             class: 'form-control'

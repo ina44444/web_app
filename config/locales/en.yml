@@ -21,6 +21,11 @@ en:
   work:
     index:
       def_select_theme: "Select theme to give your opinion"
+      title_1: "Count of rations: "
+      title_2: "Average ration: "
+      title_3: "You can rate this picture"
+      title_4: "Save"
+      title_5: "Your rating: "
     button_theme_select:
       select_theme_bt: "Select theme"
     choose_theme_from_arr:

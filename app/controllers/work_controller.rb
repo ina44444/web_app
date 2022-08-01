@@ -6,7 +6,7 @@ class WorkController < ApplicationController
     #   unless logged_in?
     # redirect_to root_path
     #end
-    @selected_theme = t('.def_select_theme')
+    @selected_theme = t('work.index.def_select_theme')
     @selected_image_name = 'Start theme'
     @current_locale = I18n.locale
     session[:current_locale] = @current_locale

@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'contact' => 'main#contacts'
   get 'index' => 'main#index'
   get 'signup' => 'users#new'
+  get 'home'=>'main#home'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

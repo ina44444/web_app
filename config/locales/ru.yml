@@ -20,7 +20,12 @@ ru:
       button_2: "Зарегестрироваться!!"
   work:
     index:
-      def_select_theme: "Выберите тему для оценки"
+      def_select_theme: "Выберите тему"
+      title_1: "Общее количество оценок: "
+      title_2: "Средняя оценка: "
+      title_3: "Выберите оценку"
+      title_4: "Сохранить"
+      title_5: "Ваша оценка: "
     button_theme_select:
       select_theme_bt: "Выбрать тему"
     choose_theme_from_arr:
@@ -31,3 +36,5 @@ ru:
   about:
     title1: "О нас"
     title2: "Некоторая информация о нас"
+  work_but_select:
+    btn: "Выберите тему"
