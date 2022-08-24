@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-
+  root 'work#index'
   get 'sessions/new'
   get 'work/index'
+
   get 'work/choose_theme'
-  get 'work/display_theme'
+  post 'work/display_theme'
   get 'images/index'
 
   # work
@@ -27,7 +28,7 @@ Rails.application.routes.draw do
   end
 
 
-  root 'work#index'
+
   get 'help'    => 'main#help'
   get 'about'   => 'main#about'
   get 'contact' => 'main#contacts'

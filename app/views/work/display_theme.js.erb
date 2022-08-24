@@ -1,27 +1,27 @@
 function ajax(image){
     $.ajax({
         type: "get",
-        url: "api/next_image",
+        url: "api/"+image,
         data: { index: imageCurrentIndex,
             theme_id: selectedThemeId,
             length: themeImagesSize,
-            locale: locale },
+            locale: locale
+        },
         dataType: 'json'
     }).done(function (data_return) {
-        console.log("success:  " + data_return.notice );
         imageCurrentIndex = data_return.new_image_index;
         oneImageName = data_return.name;
         oneImageFile = data_return.file;
         oneImageId = data_return.image_id;
         $('.image_display figcaption').hide().html(oneImageName).fadeIn(600);
-        var pathImage = "assets/pictures/"+oneImageFile;
+        var pathImage = "assets/pictures/" + oneImageFile;
         $(".img-center").attr({title: oneImageName });
         $(".img-center img").fadeOut(500, function(){
             $(this).attr({alt: oneImageName, src: pathImage, title: oneImageName }).fadeIn(600);
         });
 
         var userValuedFlag = data_return.user_valued;
-        if(userValuedFlag  === 1){
+        if(userValuedFlag  == 1){
             $('.common_value').css({"display": "block"});
             var imageValue = data_return.value;
             $('.image-user-value p').html(imageValue);
@@ -52,7 +52,7 @@ $('.total').html(valuesQty);
 // show theme
 var selectedTheme = '<%= @image_data[:theme] %>';
 
-if( selectedTheme === "Выберите тему для оценки" || selectedTheme === "Select theme to give your opinion" || selectedTheme === ""){
+if( selectedTheme == "Выберите тему для оценки" || selectedTheme == "Select theme to give your opinion" || selectedTheme == ""){
     $('.img-left-side').css({"display": "none"});
     $('.img-right-side').css({"display": "none"});
     $('.choose-user-value').css({"display": "none"});
@@ -82,7 +82,7 @@ var selectedThemeId = '<%= @image_data[:theme_id] %>';
 $('.image_display figcaption').html(oneImageName);
 
 // show image
-var pathImage = "assets/images" + oneImageFile;
+var pathImage = "assets/pictures/" + oneImageFile;
 // $('.img-center').html('<img alt="Selected Image" src="'+ pathImage + '"/>');
 $(".img-center").attr({title: oneImageName });
 $(".img-center img").attr({alt: oneImageName, src: pathImage, title: oneImageName });
@@ -90,13 +90,13 @@ $(".img-center img").attr({alt: oneImageName, src: pathImage, title: oneImageNam
 // AJAX call to next image list
 $('.img-right-side').click(function(event){
     event.stopImmediatePropagation(); // would stop the event from bubbling to parent elements,
-    ajax('next');
+    ajax('next_image');
 });
 
 // AJAX call to previous image list
 $('.img-left-side').click(function(event){
     event.stopImmediatePropagation();
-    ajax('prev');
+    ajax('prev_image');
 });
 
 // AJAX call to save image
@@ -118,7 +118,7 @@ $('a.button__results.save').unbind( "click" ).click(function(event) {
         $('.image-user-value p').html(userImageValue);
 
         var userValuedFlag = data_return.user_valued;
-        if(userValuedFlag  === 1){
+        if(userValuedFlag  == 1){
             $('.common_value').css({"display": "block"});
             $('.choose-user-value').css({"display": "none"});
 

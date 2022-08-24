@@ -6,9 +6,9 @@
   </h2>
 
   <% if logged_in? %>
-    <%= link_to t('main.home.button_1'), work_index_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to t('main.home.button_1'), root_path, class: "btn btn-outline-secondary center-block" %>
     <%else %>
-  <%= link_to t('main.home.button_2'), signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to t('main.home.button_2'), signup_path, class: "btn btn-outline-secondary center-block" %>
 
     <%end %>
     </div>

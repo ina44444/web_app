@@ -12,10 +12,11 @@ en:
     about: "About"
     contacts: "Contacts"
     news: "News"
+    lang: "English"
   main:
     home:
       title_1: "Welcome to the Travel App"
-      title_2: "This is the home page for the sample application about travelling"
+      title_2: "This is the home page for the sample application about travelling. You are invited to participate in the formation of the rating of popular places and activities. Choose one of the presented topics and rate on a hundred-point scale how attractive a place or type of vacation is for you. To the left of each rated item, you can see the average score"
       button_1: "Start expertise"
       button_2: "Sign up now!"
   work:
@@ -36,6 +37,14 @@ en:
   about:
     title1: "About"
     title2: "Some information about us"
+  profile:
+    greeting: "Welcome to your profile, "
+    data: "Private data"
+    edit: "Edit"
+    logout: "Log out"
+    btn: "Start expertise"
+
+
 
 
 

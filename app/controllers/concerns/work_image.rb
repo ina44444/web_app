@@ -9,7 +9,7 @@ module WorkImage
     logger.info "In show_image: Image.theme_images = #{Image.theme_images(theme_id).inspect} "
 
     one_image_attr = theme_images[image_index].attributes
-    # one_image_attr['name'] = one_image_attr['name']
+    one_image_attr['name'] = one_image_attr['name']
     logger.info "In show_image: one_image_attr = #{one_image_attr.inspect} "
     image_id = one_image_attr['id']
     logger.info "In show_image: image_id = #{image_id.inspect} "
@@ -17,7 +17,7 @@ module WorkImage
     user_valued, value = Value.user_valued_exists(current_user_id, image_id) # 1/0 # true/false .exists?
     logger.info "In show_image: user_valued = #{user_valued.inspect} "
 
-    values_qty = Value.all.count.round
+     values_qty = Value.all.count.round
 
     if user_valued == 1
       common_ave_value = Image.find_image(image_id).ave_value

@@ -1,12 +1,27 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
+<aside class="row">
+  <section class="user_avatar col-md-12">
+    <h1>
+      <%= gravatar_for @user %>
+    </h1>
+
+    <section class="user_info col-md-6">
+        <h1>
+          <%= t('profile.greeting')%>
+          <%=@user.name %>
+        </h1>
+        <p>
+          <%= link_to t('profile.data'), "#", class: "link-secondary" %>
+        </p>
+        <p>
+          <%= link_to t('profile.edit'), "#", class: "link-secondary" %>
+        </p>
+        <p>
+          <%= link_to t('profile.logout'), "#", class: "link-secondary" %>
+        </p>
+        <p>
+        <%= link_to t('profile.btn'), root_path, class: "btn btn-outline-secondary center-block" %>
+        </p>
     </section>
-    <%= link_to "Start expertise", root_path, class: "btn btn-lg btn-primary" %>
-  </aside>
-</div>
+  </section>
+</aside>
