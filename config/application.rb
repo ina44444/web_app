@@ -13,7 +13,7 @@ module MyApp
     config.load_defaults 7.0
 
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
-    #                                          '*.{rb,yml}').to_s]
+                                              '*.{rb,yml}').to_s]
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
     config.i18n.enforce_available_locales = true
