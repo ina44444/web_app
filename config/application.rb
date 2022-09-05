@@ -21,6 +21,8 @@ module MyApp
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.enabled = true
 
+    config.autoload_paths << "#{root}/extras"
+
 
     # Configuration for the application, engines, and railties goes here.
     #
