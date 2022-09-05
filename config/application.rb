@@ -10,8 +10,9 @@ Bundler.require(*Rails.groups)
 module MyApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    #config.load_defaults 7.0
-    config.autoloader = :classic
+    config.load_defaults 7.0
+    config.autoload_paths << "#{config.root}/lib"
+    config.eager_load_paths << "#{config.root}/lib"
 
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
                                               '*.{rb,yml}').to_s]
