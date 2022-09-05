@@ -10,9 +10,9 @@ Bundler.require(*Rails.groups)
 module MyApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    #config.load_defaults 7.0
+    config.load_defaults 7.0
 
-    #config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
     #                                          '*.{rb,yml}').to_s]
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
