@@ -10,7 +10,8 @@ Bundler.require(*Rails.groups)
 module MyApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    #config.load_defaults 7.0
+    config.autoloader = :classic
 
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
                                               '*.{rb,yml}').to_s]
@@ -21,7 +22,7 @@ module MyApp
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.enabled = true
 
-    config.autoload_paths << "#{root}/extras"
+    #config.autoload_paths << "#{root}/extras"
 
 
     # Configuration for the application, engines, and railties goes here.
