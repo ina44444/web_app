@@ -1,4 +1,4 @@
-class ThemesController < ApplicationController
+class ThemeController < ApplicationController
   before_action :set_theme, only: %i[ show edit update destroy ]
 
   # GET /themes or /themes.json
