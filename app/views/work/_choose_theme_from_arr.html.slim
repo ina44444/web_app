@@ -2,7 +2,7 @@ div class="form_select"
   = form_tag('/display_theme', remote: true,  :format => 'js') do
 
     = select_tag :theme,
-            options_from_collection_for_select(@themes, 'name','name'),
+            options_from_collection_for_select(@theme, 'name','name'),
             prompt: t('work.choose_theme_from_arr.prompt'),
             onchange:  "$(this).parent('form').submit();",
             formats: [ :js ],

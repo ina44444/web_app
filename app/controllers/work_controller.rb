@@ -10,11 +10,11 @@ class WorkController < ApplicationController
     @selected_image_name = 'Start theme'
     @current_locale = I18n.locale
     session[:current_locale] = @current_locale
-    @themes = Theme.all.pluck(:name)
+    @theme = Theme.all.pluck(:name)
   end
 
   def choose_theme
-    @themes = Theme.all
+    @theme = Theme.all
     @name = Theme.find_by_name(:name)
     #respond_to :js
   end

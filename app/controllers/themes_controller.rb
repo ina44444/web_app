@@ -3,7 +3,7 @@ class ThemesController < ApplicationController
 
   # GET /themes or /themes.json
   def index
-    @themes = Theme.all
+    @theme = Theme.all
   end
 
   # GET /themes/1 or /themes/1.json
@@ -25,7 +25,7 @@ class ThemesController < ApplicationController
 
     respond_to do |format|
       if @theme.save
-        format.html { redirect_to theme_url(@theme), notice: "Theme was successfully created." }
+        format.html { redirect_to themes_url(@theme), notice: "Theme was successfully created." }
         format.json { render :show, status: :created, location: @theme }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class ThemesController < ApplicationController
   def update
     respond_to do |format|
       if @theme.update(theme_params)
-        format.html { redirect_to theme_url(@theme), notice: "Theme was successfully updated." }
+        format.html { redirect_to themes_url(@theme), notice: "Theme was successfully updated." }
         format.json { render :show, status: :ok, location: @theme }
       else
         format.html { render :edit, status: :unprocessable_entity }

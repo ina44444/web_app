@@ -1,5 +1,5 @@
 class Theme < ApplicationRecord
-  has_many :images
+  has_many :image
 
 
 
